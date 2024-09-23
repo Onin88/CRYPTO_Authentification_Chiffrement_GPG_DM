@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Vos données</title>
+	  <meta charset="utf-8" />
+</head>
+
+<body>
+
+<h1>Exercice 2</h1>
+
+<form method="post" >
+<fieldset>
+    <legend>Stockage des mots de passe</legend>
+	<p></p>
+    E-mail :    
+	<input type="text" name="email" required id="email" /><br />   
+    Password : 
+	<input type="text" name="mdp" required id="mdp" /><br /> 		
+	
+</fieldset>
+
+
+	<br />
+<button type="button" value="Valider" onclick="ajouterUsager()" >S'inscrire</button>
+<p>Les Usagers sont stockés dans le localStorage de GOOGLE (sous forme de email + le cryptage du mdp)</p>
+<p>Dans la fonction ajouterUsager, nous faisons plusieurs cryptages sur les mdp et les ajoutons à la BDD</p>
+<p>Pour voir le LocalStorage il faut appuyer sur " F12 ", aller dans l'onglet " appli "
+	<br>
+	ensuite dans " Stockage " et enfin dans " LocalStorage " </p>
+</p>
+
+</form>
+<script src='Fonctions.js' type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</body>
+</html>
